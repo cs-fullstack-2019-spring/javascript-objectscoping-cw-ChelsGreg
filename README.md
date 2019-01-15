@@ -1,7 +1,17 @@
 # JavaScript Object/Scope Classwork
 
 1. What is the result of the following code? Explain your answer.
-  ```
+  
+//console.log(obj.prop.getFullname());
+
+--prints Aurelio De Rose: because it is within the scope of obj/prop/getFullname()
+in which the getFullname function is to return 'this.fullname'; which within prop is Aurelio De Rose
+
+//console.log(test());
+--prints out John Doe because it is printing from the Global Scope, which applies to 'var fullname'
+
+
+
   var fullname = 'John Doe';
   var obj = {
      fullname: 'Colin Ihrig',
@@ -12,16 +22,27 @@
         }
      }
   };
+
   
   console.log(obj.prop.getFullname());
 
+
   var test = obj.prop.getFullname;
+
   
   console.log(test());
-  ```
+
+
+
 
 2. What will you see in the console for the following example?
-  ```
+
+//b() will return 10; who's function returns a, which equals 10
+
+//console.log(a) will return 1; because it is outside of the 'b' function, therefore applies to 'var a'
+
+
+  
   var a = 1; 
   function b() { 
       a = 10; 
@@ -50,7 +71,23 @@ Rick Nielsen, 57, 61016
 Jimi Hendrix, 58, 90001
 
 Lemmy Kilmister, 57, 21120
-```
+
+
+
+
+var peopleList =
+
+    [firstname, lastname, age, zipcode];
+
+    includedIn =
+        [ {firstname: "Jimi", lastname: "Page", age: 62, zipcode: 00821},
+        {firstname: "Rick", lastname:"Nielson", age: 57, zipcode: 61016},
+        {firstname:"Jimi", lastname:"Hendrix", age: 58, zipcode: 90001},
+        {firstname:"Lemmy", lastname:"Kilmister", age: 57, zipcode:21120};]
+
+
+
+
 
 ### Add code to perform the following:
 
